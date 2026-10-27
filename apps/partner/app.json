@@ -1,0 +1,80 @@
+{
+  "expo": {
+    "name": "Autowra Partner",
+    "slug": "autowra-partner",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "autowrapartner",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.autowra.partner",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Autowra Partner shares your live location with customers while you are travelling to a job.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Autowra Partner keeps job tracking accurate while you are on the way to a customer.",
+        "NSCameraUsageDescription": "Autowra Partner uses the camera to capture before and after photos of each wash.",
+        "NSPhotoLibraryUsageDescription": "Autowra Partner lets you attach documents and job photos from your library."
+      }
+    },
+    "android": {
+      "package": "com.autowra.partner",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#0B1220",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "CAMERA",
+        "POST_NOTIFICATIONS",
+        "READ_MEDIA_IMAGES"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#0B1220",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 180,
+          "resizeMode": "contain"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Autowra Partner needs access to your photos so you can upload identity documents and job photos.",
+          "cameraPermission": "Autowra Partner needs camera access so you can capture before and after photos."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Autowra Partner shares your live location with customers while you are travelling to a job."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#1668BE"
+        }
+      ]
+    ],
+    "extra": {
+      "brandName": "Autowra"
+    }
+  }
+}
