@@ -1,0 +1,21 @@
+{
+  "name": "@autowra/api-client",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Typed HTTP client for the Autowra REST API",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@autowra/shared-types": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
