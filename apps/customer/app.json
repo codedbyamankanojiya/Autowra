@@ -1,0 +1,79 @@
+{
+  "expo": {
+    "name": "Autowra",
+    "slug": "autowra-customer",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "autowra",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.autowra.customer",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Autowra uses your location to confirm that a wash partner can reach your address.",
+        "NSCameraUsageDescription": "Autowra uses the camera to let you photograph your vehicle in support conversations.",
+        "NSPhotoLibraryUsageDescription": "Autowra lets you attach photos to your vehicle and support requests."
+      }
+    },
+    "android": {
+      "package": "com.autowra.customer",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#0B1220",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "CAMERA",
+        "POST_NOTIFICATIONS",
+        "READ_MEDIA_IMAGES"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#0B1220",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 180,
+          "resizeMode": "contain"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Autowra needs access to your photos so you can attach images to a support request.",
+          "cameraPermission": "Autowra needs camera access so you can attach images to a support request."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Autowra uses your location to confirm that a wash partner can reach your address."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#1668BE"
+        }
+      ]
+    ],
+    "extra": {
+      "brandName": "Autowra"
+    }
+  }
+}
